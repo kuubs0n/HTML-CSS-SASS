@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAIG,AAAD,oBAAU,CAAC;EACT,WAAW,EAAE,IAAI;EACjB,KAAK,EAAE,GAAG;CACX;;AALH,AAOE,WAPS,AAOR,OAAO,CAAC;EACP,OAAO,EAAE,GAAG;EACZ,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,CAAC;EACR,GAAG,EAAE,CAAC;EACN,UAAU,ECVT,KAAkB;EDWnB,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,EAAE;EACX,SAAS,EAAE,2CAA2C;CACvD",
+    "sources": [
+        "challenges.scss",
+        "variables.scss"
+    ],
+    "names": [],
+    "file": "challenges.css"
+}

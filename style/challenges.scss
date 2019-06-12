@@ -1,0 +1,21 @@
+@import './variables.scss';
+
+.challenges {
+  
+  &__content {
+    margin-left: auto;
+    width: 30%;
+  }
+
+  &::after {
+    content: " ";
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: $bg;
+    height: 200vh;
+    width: 45vw;
+    z-index: -1;
+    clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}

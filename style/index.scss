@@ -1,0 +1,316 @@
+@import './variables.scss';
+
+body {
+  color: $text;
+  font-family: $font;
+  font-size: 14px;
+  background: $bg;
+}
+
+.container {
+  margin: auto;
+  box-sizing: border-box;
+  max-width: 1200px;
+  padding: 2em;
+  position: relative;
+  margin: auto;
+}
+
+.primary {
+  color: $primary;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.underline {
+  padding-bottom: .25em;
+  border-bottom: 2px solid $text;
+}
+
+.title {
+  font-size: 1.6em;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  padding: 1em 0;
+}
+
+.text {
+  font-size: 1.4em;
+  line-height: 1.2em;
+  margin-bottom: 1em;
+
+  &--right {
+    text-align: right;
+  }
+
+  &--left {
+    text-align: left;
+  }
+}
+
+.icon {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+.staple {
+  margin: 0;
+  border: 0;
+  height: 1em;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &::before,
+  &::after {
+    content: " ";
+    display: inline-block;
+    width: 2em;
+    height: 100%;
+  }
+
+  &::before {
+    background: $primary;
+  }
+
+  &::after {
+    background: $text;
+  }
+}
+
+.header {
+  border-bottom: 2px solid $text-light;
+
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 6em;
+  }
+  
+}
+
+.logo {
+  display: flex;
+  
+  &__icon {
+    content: "font_download";
+    font-size: 4em;
+    margin-right: .25em;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    white-space: nowrap;
+  }
+
+  &__title {
+    font-size: 2em;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    font-size: 1em;
+    letter-spacing: .03em;
+  }
+}
+
+.form {
+
+  &__label {
+    text-transform: uppercase;
+    margin-right: 1em;
+    cursor: pointer;
+  }
+
+  &__control {
+    color: $text-light;
+    outline: none;
+  }
+
+  &__details {
+    position: absolute;
+    background: $bg;
+    top: 100%;
+    left: 0;
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+}
+
+.details {
+  &__label {
+    outline: none;
+    margin-bottom: .5em;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+
+    &::after {
+      color: $text-light;
+      font-family: 'Material Icons';
+      font-size: 2em;
+      content: "keyboard_arrow_down";
+    }
+  }
+
+  
+  &[open] {
+    z-index: 1;
+    padding: 0 1em 1em 0;
+    box-shadow: 1px 2px 1px 0px rgba(27, 31, 35, 0.15);
+
+    .details__label::after {
+      content: "keyboard_arrow_up";
+    }
+  }
+
+}
+
+.control-text {
+  border: 0;
+  min-width: 20em;
+  height: 1.5em;
+  border-bottom: 2px solid currentColor;
+}
+
+.nav {
+  padding: 1em 0;
+
+  &__list {
+    margin: auto;
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 0 .8em;
+    font-size: 1.2em;
+    letter-spacing: .1em;
+    position: relative;
+
+    &:not(:last-of-type)::after {
+      content: " ";
+      position: absolute;
+      right: 0;
+      top: 20%;
+      bottom: 20%;
+      width: 1.5px;
+      background: $text-light;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+}
+
+.footer {
+  background: $text;
+  color: $text-light;
+  text-align: center;
+  padding: 2em;
+
+  &__container {
+    display: inline-flex;
+    align-items: center;
+
+  }
+
+  &__logo {
+    font-size: .7em;
+    margin-right: 4em;
+
+    .logo__icon,
+    .logo__title {
+      color: $bg;
+    }
+  }
+
+  &__nav {
+    font-size: .7em;
+  }
+}
+
+.section {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    min-height: 10em;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.3;
+  }
+}
+
+.ads {
+  background-image: url("../assets/ad.jpg");
+  background-size: contain;
+  background-repeat: repeat-x;
+  height: 80px;
+  margin: 1.5em auto;
+}
+
+@import './intro.scss';
+@import './news.scss';
+@import './challenges.scss';
+@import './trends.scss';
+@import './table.scss';
+
+.parted {
+  position: relative;
+
+  .part {
+    &:first-child {
+      text-align: right;
+    }
+  }
+}
+.parted::before  {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: $text-light;
+  clip-path: polygon(2% 0, 0 0, 98% 100%, 100% 100%);
+}
+
+.border-right {
+  border: 0px, 2px, 0px, 0px;
+  border-style: solid;
+}

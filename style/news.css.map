@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,KAAK,CAAC;EACJ,UAAU,ECDC,OAAO;CDEnB",
+    "sources": [
+        "news.scss",
+        "variables.scss"
+    ],
+    "names": [],
+    "file": "news.css"
+}
